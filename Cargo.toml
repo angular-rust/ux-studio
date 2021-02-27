@@ -2,7 +2,18 @@
 name = "ux-studio"
 version = "0.1.0"
 authors = ["Victor Dudochkin <dudochkin.victor@gmail.com>"]
+readme = "README.md"
+homepage = "https://angular-rust.github.io/ux-studio"
+repository = "https://github.com/angular-rust/ux-studio"
+documentation = "https://docs.rs/ux-studio"
+description = "Code, Layout and Motion Studio"
+# keywords = ["gui", "multimedia"]
+categories = ["gui", "command-line-utilities", "development-tools", "multimedia", "web-programming"]
 edition = "2018"
+license = "GPL-3.0"
+
+[badges]
+maintenance = { status = "actively-developed" }
 
 [features]
 web = ["wasm-bindgen", "wasm-bindgen-futures", "wasm-logger", "gloo", "js-sys", "wasm-bindgen-test"]
@@ -29,7 +40,7 @@ zip = "0.5"
 failure = "0.1"
 serde = "1.0"
 serde_json = "1.0"
-ux-animate = { path = "../ux-animate" }
+ux-animate = { git = "https://github.com/angular-rust/ux-animate.git" }
 
 [dependencies.web-sys]
 version = "0.3"
