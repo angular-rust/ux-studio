@@ -40,7 +40,7 @@ zip = "0.5"
 failure = "0.1"
 serde = "1.0"
 serde_json = "1.0"
-ux-animate = { git = "https://github.com/angular-rust/ux-animate.git" }
+ux-animate = { version = "0.1", git = "https://github.com/angular-rust/ux-animate.git" }
 
 [dependencies.web-sys]
 version = "0.3"
