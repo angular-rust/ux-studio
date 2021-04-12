@@ -15,58 +15,24 @@ license = "GPL-3.0"
 [badges]
 maintenance = { status = "actively-developed" }
 
-[features]
-web = ["wasm-bindgen", "wasm-bindgen-futures", "wasm-logger", "gloo", "js-sys", "wasm-bindgen-test"]
-cairo = ["cairo-rs", "png", "gio", "gtk", "notify", "clap" ]
-default = ["cairo"]
-
 [dependencies]
 log = "0.4"
-png = { version = "0.16", optional = true }
-gio = { version = "0.9", features = ["v2_58"], optional = true }
-gtk = { version = "0.9", features = ["v3_22"], optional = true }
-cairo-rs = { version = "0.9", features = ["png"], optional = true }
+gio = { version = "0.9", features = ["v2_58"] }
+cairo-rs = { version = "0.9" }
 glib = { version="0.10", features = ["v2_58"] }
 gdk = { version="0.13", features = ["v3_22"] }
 gdk-pixbuf = "0.9"
-notify = { version = "4.0", optional = true }
-clap = { version = "2.33", optional = true }
-
-wasm-bindgen = { version = "0.2", optional = true }
-wasm-bindgen-futures = { version = "0.4", optional = true }
-wasm-logger = { version = "0.2", optional = true }
-gloo = { version = "0.2", optional = true }
-js-sys = { version = "0.3", optional = true }
-wasm-bindgen-test = { version = "0.3", optional = true }
+notify = { version = "4.0" }
+clap = { version = "2.33" }
 
 zip = "0.5"
 failure = "0.1"
 serde = "1.0"
 serde_json = "1.0"
+ux-primitives = "0.1"
+ux-dataflow = "0.1"
 ux-animate = "0.1"
-
-[dependencies.web-sys]
-version = "0.3"
-optional = true
-features = [
-  'KeyboardEvent',
-  "ValidityState",
-  "CustomEvent",
-  "Node",
-  "Element",
-  "HtmlElement",
-  "Window",
-  "Document",
-]
+ux-charts = "0.1"
+ux-components = "0.1"
 
 [dev-dependencies]
-
-
-# [[example]]
-# name = "web-example"
-# # crate-type = ["staticlib"]
-# required-features = ["web"]
-
-# [[example]]
-# name = "cairo-example"
-# required-features = ["cairo"]
