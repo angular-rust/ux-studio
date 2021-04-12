@@ -3,8 +3,8 @@
 use clutter::prelude::*;
 use clutter::Color;
 use components::prelude::*;
-use components::{Stage, Spinner};
-use primitives::{palette, RgbaColor};
+use components::{Spinner, Stage};
+use primitives::{color, RgbaColor};
 
 #[derive(Default, Application)]
 struct Application {
@@ -23,14 +23,17 @@ impl Application {
                 Application::quit()
             });
 
-            
-        
-        let color: RgbaColor = palette::TEAL_9.into();
-        app.window.set_background_color(&Color::new(color.r, color.g, color.b, color.a));
+        let color: RgbaColor = color::TEAL_9.into();
+        app.window.set_background_color(&Color::new(
+            color.red,
+            color.green,
+            color.blue,
+            color.alpha,
+        ));
 
         let spinner = Spinner::new();
         app.window.set_child(&spinner);
-        
+
         app
     }
 }
