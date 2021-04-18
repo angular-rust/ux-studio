@@ -29,10 +29,7 @@ zip = "0.5"
 failure = "0.1"
 serde = "1.0"
 serde_json = "1.0"
-ux-primitives = "0.1"
 ux-dataflow = "0.1"
-ux-animate = "0.1"
-ux-charts = "0.1"
-ux-components = "0.1"
+ux-framework = "0.1"
 
 [dev-dependencies]

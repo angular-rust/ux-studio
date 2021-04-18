@@ -1,14 +1,9 @@
-#![allow(unused_imports)]
-
-use clutter::prelude::*;
-use clutter::Color;
-use components::prelude::*;
-use components::{Spinner, Stage};
-use primitives::{color, RgbaColor};
+use ux::prelude::*;
+use ux::{Spinner, Window};
 
 #[derive(Default, Application)]
 struct Application {
-    window: Stage,
+    window: Window,
 }
 
 impl Application {
@@ -19,17 +14,10 @@ impl Application {
             .set_title("Sample window")
             .show()
             .connect_destroy(move |_win| {
-                println!("GOT {}", _win.test_check());
                 Application::quit()
             });
 
-        let color: RgbaColor = color::TEAL_9.into();
-        app.window.set_background_color(&Color::new(
-            color.red,
-            color.green,
-            color.blue,
-            color.alpha,
-        ));
+        app.window.set_background_color(Some(color::TEAL_9));
 
         let spinner = Spinner::new();
         app.window.set_child(&spinner);
