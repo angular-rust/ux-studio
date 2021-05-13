@@ -13,9 +13,7 @@ impl Application {
             .set_window_size(512, 512)
             .set_title("Sample window")
             .show()
-            .connect_destroy(move |_win| {
-                Application::quit()
-            });
+            .connect_destroy(move |_win| Application::quit());
 
         app.window.set_background_color(Some(color::TEAL_9));
 

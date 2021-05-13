@@ -30,6 +30,8 @@
 
 > **work in progress**
 
+> **it's all part of the** [Noname](https://github.com/noname-os)
+
 **Angular Rust** is a high productivity, `platform-agnostic` frontend framework for the [Rust language](https://www.rust-lang.org/). It now supports desktop and web development. Angular Rust currently uses Clutter for desktop development and WebAssembly for web development. We are planning to add support for mobile development.
 
 ![Angular Rust structure](https://dudochkin-victor.github.io/assets/angular-rust/structure.svg)
