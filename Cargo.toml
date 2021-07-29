@@ -17,11 +17,6 @@ maintenance = { status = "actively-developed" }
 
 [dependencies]
 log = "0.4"
-gio = { version = "0.9", features = ["v2_58"] }
-cairo-rs = { version = "0.9" }
-glib = { version="0.10", features = ["v2_58"] }
-gdk = { version="0.13", features = ["v3_22"] }
-gdk-pixbuf = "0.9"
 notify = { version = "4.0" }
 clap = { version = "2.33" }
 
